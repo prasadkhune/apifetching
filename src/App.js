@@ -1,24 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
+import Try from './Component/Try';
+import News from './Component/News';
+import Weddingpic from './Component/Weddingpic';
+import Navbar from './Component/Navbar';
+import Nabbar from './Component/Nabbar';
+import {Routes,BrowserRouter,Route} from 'react-router-dom';
+import Weddingvid from './Component/Weddingvid';
+import Weddingprepic from './Component/Weddingprepic';
+import Contactus from './Component/Contactus';
+import Explore from './Component/Explore';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+   {/* <Try></Try> */}
+  {/* <News></News> */}
+{/* <Navbar></Navbar> */}
+<BrowserRouter>
+<Nabbar></Nabbar>
+<Routes>
+
+<Route path="/Weddingpic" element={<Weddingpic/>}></Route>
+<Route path="/Weddingvid" element={<Weddingvid/>}></Route>
+<Route path="/Weddingprepic" element={<Weddingprepic/>}></Route>
+<Route path="/Contactus" element={<Contactus/>}></Route>
+<Route path="/Explore" element={<Explore/>}></Route>
+
+
+</Routes>
+</BrowserRouter>
+    </>
   );
 }
 
